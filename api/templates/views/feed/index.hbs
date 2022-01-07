@@ -1,0 +1,14 @@
+<html lang="en">
+<head>
+    {{>cdnLinks}}
+    <title>dynamic title</title>
+</head>
+<body style="font-family: 'Inter', sans-serif">
+  {{#if username}}
+  {{>afterProfileCreation/index}}
+  {{else}}
+  {{>beforeProfileCreation/index}}
+  {{/if}}
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+<form method="POST" action="/create">
+<div class="min-h-screen flex flex-col max-w-md mx-auto bg-gray-50 opacity-100 font-poppins px-4 bg-no-repeat bg-cover bg-center">
+    <div class="flex justify-between px-1 pt-4 items-center">
+      <div class="hover:bg-gray-100 rounded-full">
+     </div>
+      <div>
+        <p class="font-semibold text">Create Your Profile</p>
+      </div>
+      <div></div>
+    </div>
+
+<div x-data="{photoName: null, photoPreview: null}" class="col-span-6 ml-2 sm:col-span-4 mt-5 md:mr-3">
+    <!-- Photo File Input -->
+    <input type="file" id="profileImage" class="hidden" x-ref="photo" x-on:change="
+                        photoName = $refs.photo.files[0].name;
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            photoPreview = e.target.result;
+                        };
+                        reader.readAsDataURL($refs.photo.files[0]);
+    ">
+
+    <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="photo">
+        Profile Photo <span class="text-red-600"> </span>
+    </label>
+    
+    <div class="text-center">
+        <!-- Current Profile Photo -->
+        <div class="mt-2" x-show="! photoPreview">
+            <img src="{{muser.picture}}" class="w-32 h-32 m-auto rounded-full shadow">
+        </div>
+        <!-- New Profile Photo Preview -->
+        <div class="mt-2" x-show="photoPreview" style="display: none;">
+            <span class="block w-40 h-40 rounded-full m-auto shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
+            </span>
+        </div>
+        <button type="button" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-3" x-on:click.prevent="$refs.photo.click()">
+            Select New Photo
+        </button>
+    </div>
+    
+</div>
+    <div class="pt-12 px-4 w-full flex flex-col">
+      <p class="font-semibold text-gray-600">Add Username</p>
+       <div class="my-8">
+       <label class="input-field inline-flex items-baseline border rounded-full bg-white p-4"><span class="flex-none text-dusty-blue-darker select-none leading-none">addby.me/</span><div class="flex-1 leading-none"><input id="username" type="text" class="focus:outline-none" name="username" placeholder="fiona"></div></label>
+       </div>
+       </div>
+
+
+	    <div class="md:flex flex-row md:space-x-4 px-4 w-full text-xs">
+	    <div class="mb-3 space-y-2 w-full text-xs">
+		<label class="font-semibold text-gray-600 py-2">Name <abbr title="required">*</abbr></label>
+		<input placeholder="Name" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4" required="required" type="text" name="name" id="name">
+		<p class="text-red text-xs hidden">Please fill out this field.</p>
+		</div>
+		<div class="mb-3 space-y-2 w-full text-xs">
+		<label class="font-semibold text-gray-600 py-2">Date Of Birth <abbr title="required">*</abbr></label>
+		<input placeholder="DOB" class="appearance-none block w-full bg-grey-lighter text-grey-darker border focus:outline-none border-grey-lighter rounded-lg h-10 px-4" required="required" type="date" name="dob" id="dob">
+		<p class="text-red text-xs hidden">Please fill out this field.</p>
+		</div>
+		</div>
+
+
+
+ <div class="flex flex-row-reverse p-3">
+               <div class="flex-initial pl-3">
+                  <button type="submit" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-black rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">
+                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M5 5v14h14V7.83L16.17 5H5zm7 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-8H6V6h9v4z" opacity=".3"></path>
+                        <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm2 16H5V5h11.17L19 7.83V19zm-7-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zM6 6h9v4H6z"></path>
+                     </svg>
+                     <span class="pl-2 mx-1">Save</span>
+                  </button>
+               </div>
+               <div class="flex-initial">
+                        <a href="/"> <button type="button" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-black capitalize rounded-md  hover:bg-red-200 hover:fill-current hover:text-red-600  focus:outline-none  transition duration-300 transform active:scale-95 ease-in-out">
+                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M8 9h8v10H8z" opacity=".3"></path>
+                        <path d="M15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"></path>
+                     </svg>
+                     <span class="pl-2 mx-1">Delete</span>
+                  </button>
+                  </a>
+               </div>
+            </div>
+         </div>
+
+      </div>
+  
+</form>

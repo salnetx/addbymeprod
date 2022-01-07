@@ -1,9 +1,33 @@
 {
   "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
     "express": "^4.17.2",
-    "hbs": "^4.2.0"
+    "express-openid-connect": "^2.5.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.1.4",
+    "multer": "^1.4.4"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0"
-  }
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "name": "addbymeprod",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index -e hbs,js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zincv8/addbymeprod.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zincv8/addbymeprod/issues"
+  },
+  "homepage": "https://github.com/zincv8/addbymeprod#readme",
+  "description": ""
 }
