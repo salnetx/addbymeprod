@@ -179,6 +179,11 @@ router.get('/:username', async(req,res)=>{
      }
 });
 
+router.get('/:username/*', async(req,res)=>{
+     
+    res.render(`./publicViews/error`)
+});
+
 
 
 module.exports = router;
