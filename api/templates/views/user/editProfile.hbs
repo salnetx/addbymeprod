@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form method="POST" action="/editprofile/{{authUser.sub}}">
+<form enctype="application/json" role="form" method="POST" action="/editprofile/{{authUser.sub}}">
   <div class="min-h-screen flex flex-col max-w-md mx-auto bg-gray-50 opacity-100 font-poppins px-4 bg-no-repeat bg-cover bg-center">
     <div class="flex justify-between px-1 pt-4 items-center">
       <div class="hover:bg-gray-100 rounded-full">
@@ -54,7 +54,7 @@
     <div class="pt-12 px-4 w-full flex flex-col">
       <p class="font-semibold text-gray-600">Add Username</p>
        <div class="my-8">
-       <label class="input-field inline-flex items-baseline border rounded-full bg-white p-4"><span class="flex-none text-dusty-blue-darker select-none leading-none">addby.me/</span><div class="flex-1 leading-none"><input id="username" type="text" class="focus:outline-none" name="username" placeholder="fiona"></div></label>
+       <label class="input-field inline-flex items-baseline border rounded-full bg-white p-4"><span class="flex-none text-dusty-blue-darker select-none leading-none">addby.me/</span><div class="flex-1 leading-none"><input id="username" type="text" class="focus:outline-none" name="username" placeholder="{{username}}"></div></label>
        </div>
        </div>
 
@@ -62,12 +62,12 @@
 	    <div class="md:flex flex-row md:space-x-4 px-4 w-full text-xs">
 	    <div class="mb-3 space-y-2 w-full text-xs">
 		<label class="font-semibold text-gray-600 py-2">Name</label>
-		<input placeholder="Name" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="name" id="name">
+		<input placeholder="{{name}}" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="name" id="name">
 		<p class="text-red text-xs hidden">Please fill out this field.</p>
 		</div>
 		<div class="mb-3 space-y-2 w-full text-xs">
 		<label class="font-semibold text-gray-600 py-2">Date Of Birth </label>
-		<input placeholder="DOB" min="1900-01-01" max="2005-01-01" class="appearance-none block w-full bg-grey-lighter text-grey-darker border focus:outline-none border-grey-lighter rounded-lg h-10 px-4"  type="date" name="dob" id="dob">
+		<input placeholder="{{dob}}" min="1900-01-01" max="2005-01-01" class="appearance-none block w-full bg-grey-lighter text-grey-darker border focus:outline-none border-grey-lighter rounded-lg h-10 px-4"  type="date" name="dob" id="dob">
 		<p class="text-red text-xs hidden">Please fill out this field.</p>
 		</div>
 		</div>
@@ -75,12 +75,12 @@
         <div class="md:flex flex-row md:space-x-4 px-4 w-full text-xs">
 	    <div class="mb-3 space-y-2 w-full text-xs">
 		<label class="font-semibold text-gray-600 py-2">Profession</label>
-		<input placeholder="Profession" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="name" id="name">
+		<input placeholder="Profession" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="job" id="job">
 		<p class="text-red text-xs hidden">Please fill out this field.</p>
 		</div>
 		<div class="mb-3 space-y-2 w-full text-xs">
 		<label class="font-semibold text-gray-600 py-2">Workplace </label>
-		<input placeholder="Workplace" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="name" id="name">
+		<input placeholder="Workplace" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="workplace" id="workplace">
 		<p class="text-red text-xs hidden">Please fill out this field.</p>
 		</div>
 		</div>

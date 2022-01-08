@@ -44,13 +44,22 @@ router.get('/edit/profile', async(req,res)=>{
 })
 
 
-router.patch('/editprofile/:id', async(req,res)=>{
+router.post('/editprofile/:postid', async(req,res)=>{
 
-        User.findOne({_id : req.params.id},(err,user)=>{
-            user.username = req.body.username
-        })
- 
+       try{
 
+         const updatedProfile = await User.updateMany({_id : req.params.postid},{$set: {
+             username : req.body.username,
+             name : req.body.name,
+             dob : req.body.dob,
+             job : req.body.job,
+             bio : req.body.bio,
+             workplace : req.body.workplace
+         }})
+         res.redirect('/profile')
+       }catch(err){
+           console.log(err)
+       }
 })
 
 router.get('/profile', async(req,res)=>{
