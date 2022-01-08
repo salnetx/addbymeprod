@@ -169,7 +169,8 @@ router.get('/:username', async(req,res)=>{
             username : dbUser[0].username,
             name : dbUser[0].name,
             dob : dbUser[0].dob,
-            isAuthenticated : req.oidc.isAuthenticated()
+            isAuthenticated : req.oidc.isAuthenticated(),
+            avatar : dbUser[0].avatar
         }) 
      }catch(err){
         res.render(`./publicViews/error`,{
