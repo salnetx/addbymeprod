@@ -69,7 +69,10 @@ router.get('/profile', async(req,res)=>{
         res.render(`./user/profile`,{
             username : dbUser1[0].username,
             name : dbUser1[0].name,
-            dob : dbUser1[0].dob
+            dob : dbUser1[0].dob,
+            job : dbUser1[0].job,
+            workplace : dbUser1[0].workplace,
+            bio : dbUser1[0].bio
         })
     }catch(err){
          res.redirect('/')
@@ -157,7 +160,7 @@ router.get('/:username', async(req,res)=>{
      
     try{
         const dbUser = await User.find({username : req.params.username});
-        res.render('./user/publicProfile',{
+        res.render('./user/profileTheme/theme1',{
             username : dbUser[0].username,
             name : dbUser[0].name,
             dob : dbUser[0].dob,

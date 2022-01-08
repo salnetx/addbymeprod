@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
         type : String
     },
 
-    worksPlace : {
+    workplace : {
        required : false,
        type : String
     },
