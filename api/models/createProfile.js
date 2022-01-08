@@ -36,6 +36,10 @@ const userSchema = new mongoose.Schema({
     bio : {
         required :false,
         type : String
+    },
+    avatar : {
+        require : false,
+        type : String
     }
 
 

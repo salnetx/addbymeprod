@@ -15,7 +15,8 @@ router.post('/create', async(req,res)=>{
         dob : req.body.dob,
         job : req.body.job,
         bio : req.body.bio,
-        workplace : req.body.workplace
+        workplace : req.body.workplace,
+        avatar : req.body.avatar
 
     })
 
@@ -36,7 +37,8 @@ router.get('/edit/profile', async(req,res)=>{
             authUser : _authUser,
             username : dbUser1[0].username,
             name : dbUser1[0].name,
-            dob : dbUser1[0].dob
+            dob : dbUser1[0].dob,
+            avatar : dbUser1[0].avatar
         })
     }catch(err){
          res.redirect('/profile')
@@ -54,7 +56,8 @@ router.post('/editprofile/:postid', async(req,res)=>{
              dob : req.body.dob,
              job : req.body.job,
              bio : req.body.bio,
-             workplace : req.body.workplace
+             workplace : req.body.workplace,
+             avatar : req.body.avatar
          }})
          res.redirect('/profile')
        }catch(err){
@@ -72,7 +75,8 @@ router.get('/profile', async(req,res)=>{
             dob : dbUser1[0].dob,
             job : dbUser1[0].job,
             workplace : dbUser1[0].workplace,
-            bio : dbUser1[0].bio
+            bio : dbUser1[0].bio,
+            avatar : dbUser1[0].avatar
         })
     }catch(err){
          res.redirect('/')
@@ -136,7 +140,8 @@ router.get('/', async(req,res)=>{
             res.render(`./user/feed`,{
                 username : dbUser1[0].username,
                 name : dbUser1[0].name,
-                dob : dbUser1[0].dob
+                dob : dbUser1[0].dob,
+                avatar : dbUser1[0].avatar
             })
         }catch(err){
             res.render(`./user/createProfile.hbs`,{
