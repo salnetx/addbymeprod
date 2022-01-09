@@ -105,7 +105,9 @@ router.get('/explore', async(req,res)=>{
         res.render(`./user/explore`,{
             username : dbUser1[0].username,
             name : dbUser1[0].name,
-            dob : dbUser1[0].dob
+            dob : dbUser1[0].dob,
+            avatar : dbUser1[0].avatar,
+            
         })
     }catch(err){
          res.redirect('/')
@@ -119,7 +121,8 @@ router.get('/saved', async(req,res)=>{
         res.render(`./user/savedlinks`,{
             username : dbUser1[0].username,
             name : dbUser1[0].name,
-            dob : dbUser1[0].dob
+            dob : dbUser1[0].dob,
+            avatar : dbUser1[0].avatar
         })
     }catch(err){
          res.redirect('/')
