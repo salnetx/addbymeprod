@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     {{>cdnLinks}}
-    <title>{{username}}</title>
+    <title>{{username}} • addbyme</title>
 </head>
 <body style="font-family: 'Inter', sans-serif">
   <!-- component -->
@@ -23,7 +23,10 @@
       </div>
       <div class="w-9/12 flex items-center">
         <div class="w-10/12 flex flex-col leading-none pl-4">
-          <p class="text-2xl font-bold">{{username}}</p>
+          <p class="text-2xl font-bold flex space-x-1">{{username}}
+              <svg class="w-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+          
+           </p>
           <p class="text-sm pt-1 font-light text-gray-700">{{job}} {{workplace}}</p>
           <p class="text-sm pt-2 font-light text-gray-700">"{{bio}}"</p>
         </div>
@@ -81,11 +84,15 @@
     
     <div class="pt-12 mb-8 px-4 w-full flex flex-col">
       <div class="flex flex-col w-full pt-2 space-y-2">
-        <div class="flex w-full h-12">
-          <div class="w-2/12 h-full">
+        
+          <div class="flex w-full h-12">
+         <a href="/monetize"> 
+           <div class="w-2/12 h-full">
             <div class="h-12 w-12  rounded-full flex items-center">
-           <svg class="w-full text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>          </div>
+           <svg class="w-full text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>          
+           </div>
           </div>
+          </a>
           <div class="w-8/12 h-full flex items-start">
             <p class="my-auto text-lg font-semibold">Monetize</p>
           </div>

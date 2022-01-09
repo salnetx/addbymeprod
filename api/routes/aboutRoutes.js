@@ -26,4 +26,8 @@ router.get('/ads',(req,res)=>{
     res.send(`ads`)
 })
 
+router.get('/monetize',(req,res)=>{
+    res.render(`publicViews/monetize`)
+})
+
 module.exports = router;
