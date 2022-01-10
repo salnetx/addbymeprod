@@ -27,7 +27,8 @@ font-style: normal; ">
         <h1 class="text-lg text-center font-semibold">
           {{name}}
         </h1>
-        		  <div class="flex justify-around mt-8 ">
+       {{#if isAuthenticated}}
+       <div class="flex justify-around mt-8 ">
 			        <a href="#" class="text-red-100 rounded-full py-2 px-5 text-lg font-semibold bg-black inline-block border">Chat</a>
 
 			       <a href="#" class="text-red-100 rounded-full py-2 px-5 text-lg font-semibold bg-green-500 inline-block border hover:bg-green-600 hover:text-white">My Projects</a>
@@ -35,6 +36,7 @@ font-style: normal; ">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
          </a>
 		  </div>
+      {{/if}}
       {{>afterProfileCreation/profileSocial}}
       </div>
     </div>
@@ -45,86 +47,138 @@ font-style: normal; ">
 	
 </div>
 		<!-- component -->
-		<div class=" flex-1 p-1 flex justify-center items-center">
-			<div class=" w-full md:max-w-4xl rounded-lg">
-			<div class="px-3">
-			  <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-md">
-				<div class="flex items-center">
-				  <img class="rounded-full h-12 w-12" src="https://adbmcdnimg.netlify.app/facebook.png" alt="Logo" />
-				<div class="ml-2">
-				  <div class="text-sm font-semibold text-gray-600">facebook</div>
-				  <div class="text-sm font-light text-gray-500">@{{username}}</div>
-				</div>
-				</div>
-				<div>
-			
-				</div>
-			  </div>
-			  <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-md">
-				<div class="flex items-center">
-				  <img class="rounded-full h-12 w-12" src="https://vioimg.vercel.app/twitter.png" alt="Logo" />
-				  <div class="ml-2">
-					<div class="text-sm font-semibold text-gray-600">twitter</div>
-					<div class="text-sm font-light text-gray-500">@{{username}}</div>
-				  </div>
-				</div>
-				<div>
-				
-				</div>
-			  </div>
-			  <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-md">
-				<div class="flex items-center">
-				  <img class="rounded-full h-12 w-12" src="https://adbmcdnimg.netlify.app/pinterest.png" alt="Logo" />
-				  <div class="ml-2">
-					<div class="text-sm font-semibold text-gray-600">pinterest</div>
-					<div class="text-sm font-light text-gray-500">@{{username}}</div>
-				  </div>
-				</div>
-				<div>
-				
-				</div>
-			  </div>
-              			  <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-md">
-				<div class="flex items-center">
-				  <img class="rounded-full h-12 w-12" src="https://adbmcdnimg.netlify.app/github.png" alt="Logo" />
-				  <div class="ml-2">
-					<div class="text-sm font-semibold text-gray-600">github</div>
-					<div class="text-sm font-light text-gray-500">@{{username}}</div>
-				  </div>
-				</div>
-				<div>
-				
-				</div>
-			  </div>
-			  <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-md">
-				<div class="flex items-center">
-				  <img class="rounded-full h-12 w-12" src="https://adbmcdnimg.netlify.app/spotify.png" alt="Logo" />
-				  <div class="ml-2">
-					<div class="text-sm font-semibold text-gray-600">spotify</div>
-					<div class="text-sm font-light text-gray-500">@{{username}}</div>
-				  </div>
-				</div>
-				<div>
-				
-				</div>
-			  </div>
-			  <div class="flex  justify-center items-center h-16 p-4 my-6">
-				
-				  <div class="ml-1 text-gray-500 font-medium"><a href="https://addby.me"> <img style="width: 40px;" src="https://adbmcdnimg.netlify.app/added.png" alt=""></a></div>
-			  </div>
-			</div>
-		
-			</div>
-			<style>
-			  .toggle__dot {
-				transition: all 0.3s ease-in-out;
-			}
-			
-			input:checked ~ .toggle__dot {
-				transform: translateX(100%);
-				background-color:#68D391
-			}
-			</style>
 
+  <div class=" flex-1 p-1 flex justify-center items-center">
+    <div class=" w-full md:max-w-4xl rounded-lg">
+    <div class="px-3">
+      
+
+      <a href="https://twitter.com/sahilnetic">
+      <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
+      <div class="flex items-center">
+        <img class="rounded-full h-12 w-12" src="https://vionet-addby-me-cdn.netlify.app/twitter.png" alt="Logo" />
+      <div class="ml-2">
+        <div class="text-sm font-semibold text-black">Twitter</div>
+        <div class="text-sm font-light text-gray-600">@sahilnetic</div>
+      </div>
+      </div>
+      <div>
+    
+      </div>
+      </div>
+    </a>
+      <a href="https://github.com/sahilnetic">
+      <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
+      <div class="flex items-center">
+        <img class="rounded-full h-12 w-12" src="https://vionet-addby-me-cdn.netlify.app/github.png" alt="Logo" />
+        <div class="ml-2">
+        <div class="text-sm font-semibold text-black">Github</div>
+        <div class="text-sm font-light text-gray-600">@sahilnetic</div>
+        </div>
+      </div>
+      <div>
+      
+      </div>
+      </div>
+      </a>
+      <a href="https://www.instagram.com/sahilnetic/">
+      <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
+        <div class="flex items-center">
+        <img class="h-12 w-12" src="https://vionet-addby-me-cdn.netlify.app/instagram.png" alt="Logo" />
+        <div class="ml-2">
+          <div class="text-sm font-semibold text-black">Instagram</div>
+          <div class="text-sm font-light text-gray-600">@sahilnetic</div>
+        </div>
+        </div>
+        <div>
+        
+        </div>
+      </div>
+      </a>
+
+      <a href="https://www.duolingo.com/profile/sahilnetic">
+        <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
+          <div class="flex items-center">
+          <img class="h-12 rounded-full w-12" src="https://vionet-addby-me-cdn.netlify.app/duolingo.png" alt="Logo" />
+          <div class="ml-2">
+            <div class="text-sm font-semibold text-black">Duolingo</div>
+            <div class="text-sm font-light text-gray-600">@sahilnetic</div>
+          </div>
+          </div>
+          <div>
+          
+          </div>
+        </div>
+        </a>
+
+        <a href="https://www.quora.com/profile/sahilnetic/">
+          <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
+            <div class="flex items-center">
+            <img class="h-12 rounded-full w-12" src="https://viocdn.netlify.app/quora.png" alt="Logo" />
+            <div class="ml-2">
+              <div class="text-sm font-semibold text-black">Quora</div>
+              <div class="text-sm font-light text-gray-600">@sahilnetic</div>
+            </div>
+            </div>
+            <div>
+            
+            </div>
+          </div>
+          </a>
+
+        <a href="https://www.linkedin.com/in/sahilnetic/">
+          <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
+            <div class="flex items-center">
+            <img class="h-12 rounded-full w-12" src="https://vionet-addby-me-cdn.netlify.app/linkedin.png" alt="Logo" />
+            <div class="ml-2">
+              <div class="text-sm font-semibold text-black">Linkedin</div>
+              <div class="text-sm font-light text-gray-600">@sahilnetic</div>
+            </div>
+            </div>
+            <div>
+            
+            </div>
+          </div>
+          </a>
+
+
+          <a href="https://www.snapchat.com/add/sahilnetic/">
+            <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
+              <div class="flex items-center">
+              <img class="h-12 rounded-full w-12" src="https://vionet-addby-me-cdn.netlify.app/snapchat.png" alt="Logo" />
+              <div class="ml-2">
+                <div class="text-sm font-semibold text-black">Snapchat</div>
+                <div class="text-sm font-light text-gray-600">@sahilnetic</div>
+              </div>
+              </div>
+              <div>
+              
+              </div>
+            </div>
+            </a>
+
+
+        <a href="#"><div class="flex justify-between items-center h-50 p-4 my-6  rounded-lg border border-gray-100 shadow-xl">
+        <div class="flex items-center">
+          <img style="height: 90px;" class="rounded-md h-30 w-30" src="https://ideas.ted.com/wp-content/uploads/sites/3/2021/03/FINAL_Manage-Anxiety.gif" alt="Logo" />
+          <div class="ml-2">
+          <div class="text-block font-semibold text-black">How To Get Rid Of Anxiety, Depression And Mental Illness :)</div>
+          <p class="text-sm"></p>
+          </div>
+        </div>
+        <div>
+        </div>
+        </div>
+        </a>
+
+
+      <div class="flex  justify-center items-center h-16 p-4 my-6">
+      
+        <div class="ml-1 text-gray-500 font-medium w-8"><img  src="https://adbmcdnimg.netlify.app/added.png"> </a></div>
+      </div>
+    </div>
+  
+    </div>
+		
     </body>
     </html>
