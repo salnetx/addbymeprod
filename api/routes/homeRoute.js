@@ -168,7 +168,7 @@ router.get('/:username', async(req,res)=>{
      
     try{
         const dbUser = await User.find({username : req.params.username});
-        res.render('./user/profileTheme/theme1',{
+        res.render('./user/profileTheme/theme0',{
             username : dbUser[0].username,
             name : dbUser[0].name,
             dob : dbUser[0].dob,
