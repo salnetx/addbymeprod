@@ -50,7 +50,7 @@ router.post('/editprofile/:postid', async(req,res)=>{
 
        try{
 
-         const updatedProfile = await User.updateMany({_id : req.params.postid},{$set: {
+         const updatedProfile = await User.update({_id : req.params.postid},{$set: {
              username : req.body.username,
              name : req.body.name,
              dob : req.body.dob,
