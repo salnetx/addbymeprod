@@ -7,6 +7,15 @@
 font-weight: 700;
 font-style: normal; ">
 <!-- component -->
+    
+     {{#if isAuthenticated}}
+      <div class="mt-2 ml-2">
+      <a href="javascript:history.back()">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/></svg>
+      </a>
+      </div>
+      {{else}}
+      {{/if}}
+
 <!-- eslint-disable -->
 
     <div class="w-full justify-center items-center overflow-hidden md:max-w-sm rounded-lg mx-auto">
