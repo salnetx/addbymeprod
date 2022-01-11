@@ -19,13 +19,13 @@
 
 
 	  <div class="w-1/6">
-		<div onclick="ap" class="text-xs text-center md:text-base font-bold text-blue-400">
-      Links
+	<a href="/"><div onclick="ap" class="text-xs text-center md:text-base">
+      Links</a>
     </div>
 	  </div>
 
 	  <div class="w-1/6">
-	  <a href="/posts"><div class="text-xs text-center md:text-base">Posts</div></a>
+	  <div class="text-xs text-center md:text-base  font-bold text-blue-400">Posts</div>
 	  </div>
 
 
@@ -61,41 +61,49 @@
     
    <hr class="mt-2">
      <div class="px-4" id="demo">
-        <p class="font-semibold text-gray-600 flex mt-5">+ Add New Link</p>
+        <p class="font-semibold text-gray-600 flex mt-5">+ Add New Post</p>
      
      <!-- Edit Link -->
- 
-     </div>
-
-    <div class="px-4">
-    {{>afterProfileCreation/socialButton}}
-  </div>
+     <a href="/add/post">  <button id="facebook" class="bg-white  sticky duration-500  fixed  w-12 transform hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-black hover:text-white text-gray-800 ">
+     <i class="fas fa-plus"></i>
+     </button> 
+     </a>    
   
-
-  <p class="font-semibold text-gray-600 flex mt-5 px-4">+ Add New Link</p>
-  
-  <div class="mt-4 px-4">
-           <!-- Edit Link -->
-  <a href="/add/post">  <button id="facebook" class="bg-white  sticky duration-500  fixed  w-12 transform hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-black hover:text-white text-gray-800 ">
-    <i class="fas fa-plus"></i>
-    </button> 
-  </a>
-    <a href="https://twitter.com/duolingo">
-        <div class="flex justify-between items-center h-16 px-4 my-2  rounded-full border border-gray-100 shadow-xl">
+     <p class="font-semibold px-4 text-gray-600 flex mt-5">Added Posts</p>
+      <a href="#"><div class="flex justify-between items-center h-50 p-4 my-6  rounded-lg border border-gray-100 shadow-xl">
         <div class="flex items-center">
-          <img class="rounded-full h-12 w-12" src="https://icon-library.com/images/2018/2298785_oreos-oreo-cookie-adult-costume-hd-png-download.png" alt="Logo" />
-        <div class="ml-2">
-          <div class="text-sm font-semibold text-black">How to get free oreo</div>
-          <div class="text-sm flex font-light text-gray-600">yourpal.com<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg></div>
-        </div>
+          <img style="height: 90px;" class="rounded-md h-30 w-30" src="https://ideas.ted.com/wp-content/uploads/sites/3/2021/03/FINAL_Manage-Anxiety.gif" alt="Logo" />
+          <div class="ml-2">
+          <div class="text-block font-semibold text-black">How To Get Rid Of Anxiety, Depression And Mental Illness :)</div>
+          <p class="text-sm">Hey👋! You are not alone</p>
+          </div>
         </div>
         <div>
-      
         </div>
+        </div> 
+        </a>
+        <p class="font-semibold px-4 text-gray-600 flex mt-5">Delete | Edit</p>
+
+
+              <a href="#"><div class="flex justify-between items-center h-50 p-4 my-6  rounded-lg border border-gray-100 shadow-xl">
+        <div class="flex items-center">
+          <img style="height: 90px;" class="rounded-md h-30 w-30" src="https://64.media.tumblr.com/0e4f23f9ca1a1dbe29fa9379d72e49db/tumblr_mzbshi7agb1qgxdtao1_500.gif" alt="Logo" />
+          <div class="ml-2">
+          <div class="text-block font-semibold text-black">How To Heal Your Past Trauma</div>
+          <p class="text-sm"></p>
+          </div>
         </div>
-      </a>
-         <p class="font-semibold px-4 text-gray-900 flex mt-5">Delete | Edit</p>
-  </div>
+        <div>
+        </div>
+        </div> 
+        </a>
+        <p class="font-semibold px-4 text-gray-600 flex mt-5">Delete | Edit</p>
+
+
+     </div>
+    
+
+
 
     </div>
 <!-- Post -->

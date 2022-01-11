@@ -50,7 +50,7 @@ router.post('/editprofile/:postid', async(req,res)=>{
 
        try{
 
-         const updatedProfile = await User.update({_id : req.params.postid},{$set: {
+         await User.update({_id : req.params.postid},{$set: {
              username : req.body.username,
              name : req.body.name,
              dob : req.body.dob,
@@ -70,6 +70,42 @@ router.get('/profile', async(req,res)=>{
         const _authUser = await req.oidc.user;
         const dbUser1 = await User.find({_id : _authUser.sub});
         res.render(`./user/profile`,{
+            username : dbUser1[0].username,
+            name : dbUser1[0].name,
+            dob : dbUser1[0].dob,
+            job : dbUser1[0].job,
+            workplace : dbUser1[0].workplace,
+            bio : dbUser1[0].bio,
+            avatar : dbUser1[0].avatar
+        })
+    }catch(err){
+         res.redirect('/')
+    }
+})
+
+router.get('/theme', async(req,res)=>{
+    try{
+        const _authUser = await req.oidc.user;
+        const dbUser1 = await User.find({_id : _authUser.sub});
+        res.render(`./user/theme`,{
+            username : dbUser1[0].username,
+            name : dbUser1[0].name,
+            dob : dbUser1[0].dob,
+            job : dbUser1[0].job,
+            workplace : dbUser1[0].workplace,
+            bio : dbUser1[0].bio,
+            avatar : dbUser1[0].avatar
+        })
+    }catch(err){
+         res.redirect('/')
+    }
+})
+
+router.get('/posts', async(req,res)=>{
+    try{
+        const _authUser = await req.oidc.user;
+        const dbUser1 = await User.find({_id : _authUser.sub});
+        res.render(`./user/posts`,{
             username : dbUser1[0].username,
             name : dbUser1[0].name,
             dob : dbUser1[0].dob,

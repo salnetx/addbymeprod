@@ -39,14 +39,14 @@
     </div>
     <div class="pt-12 px-4 w-full flex flex-col">
       <p class="font-semibold text-gray-600">Settings</p>
-      <div class="flex w-full pt-2 space-x-2 text-sm">
+      <div class="flex w-full pt-2 space-x-4 text-sm">
         <button class="bg-white w-28 rounded-full px-3 py-2 font-ligth text-black border border-gray-400 flex shadow"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
         </svg> Settings</button>
 
        <a href="/edit/themes"><button class="bg-black w-28 rounded-full px-3 py-2 font-ligth text-white flex"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-      <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
-      </svg> Developer</button></a>
+      <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd" />
+      </svg> Chat</button></a>
 
       <a href="/edit/posts"><button class="bg-black w-28 rounded-full px-2 py-2 font-ligth text-white flex"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
       <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
@@ -63,35 +63,40 @@
     </div>
   
   
-     <p class="font-semibold px-4 text-gray-600 flex mt-5">Social links &nbsp;<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg></p>
-     
-  
-  
-  
-  {{>afterProfileCreation/socialButton}}
-  
-  
-     <p class="font-semibold px-4 text-gray-600 flex mt-5">Added links</p>
+     <p class="font-semibold px-4 text-gray-600 flex mt-5">Sponsor Id</p>
+     <p class="font-semibold px-4 text-gray-600 flex text-sm">we only support instamojo &nbsp;<a class="text-blue-400" href="#"> learn more</a></p>
+        <div class="px-4 space-y-3">
+       <input placeholder="Instamojo Id" class="appearance-none mt-2 block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4" type="text" name="bio" id="bio">
+       </div>
+    
+     <p class="font-semibold px-4 text-gray-600 flex mt-5">Monetization</p>
+     <p class="font-semibold px-4 text-gray-600 flex mt-5">Developers</p>
+     <p class="font-semibold px-4 text-gray-600 flex mt-5">Dark Mode</p>
+     <style>
+/* CHECKBOX TOGGLE SWITCH */
+/* @apply rules for documentation, these do not work as inline style */
+.toggle-checkbox:checked {
+  @apply: right-0 border-green-400;
+  right: 0;
+  border-color: #000;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-green-400;
+  background-color: #000;
+}
+</style>
+               
+<div class="relative inline-block w-10 mr-2 pt-2 mx-4 align-middle select-none transition duration-200 ease-in">
+    <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+    <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+</div>
+     <p class="font-semibold px-4 text-gray-600 flex mt-5">Get Help</p>
+    <p class="font-semibold px-4 text-gray-600 flex mt-5">Chat With Us</p>
+
      
   <!-- Edit Link -->
-  <a href="/add/post">  <button id="facebook" class="bg-white  sticky duration-500  fixed  w-12 transform hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-black hover:text-white text-gray-800 ">
-    <i class="fas fa-plus"></i>
-    </button> 
-  </a>
-    <a href="https://twitter.com/duolingo">
-        <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
-        <div class="flex items-center">
-          <img class="rounded-full h-12 w-12" src="https://icon-library.com/images/2018/2298785_oreos-oreo-cookie-adult-costume-hd-png-download.png" alt="Logo" />
-        <div class="ml-2">
-          <div class="text-sm font-semibold text-black">How to get free oreo</div>
-          <div class="text-sm flex font-light text-gray-600">yourpal.com<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg></div>
-        </div>
-        </div>
-        <div>
-      
-        </div>
-        </div>
-      </a>
+
+
   
     
     <div class="pt-12 mb-8 px-4 w-full flex flex-col">
@@ -106,7 +111,7 @@
           </div>
           </a>
           <div class="w-8/12 h-full flex items-start">
-            <p class="my-auto text-lg font-semibold">Monetize</p>
+            <p class="my-auto text-lg font-semibold">Try Premium</p>
           </div>
           <div class="w-4/12 h-full flex justify-end items-end">
            <a href="/logout"> <button class="flex bg-red-700 hover:bg-red-600 hover:shadow-lg rounded-md my-auto px-5 py-1 float-right text-white font-medium">Logout</button>
