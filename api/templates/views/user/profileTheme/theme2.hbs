@@ -8,11 +8,20 @@ font-weight: 700;
   
 font-style: normal; background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cca1e136569841.5720ffd3c7679.gif');
 
-  {{#if 1}}
+  /* Set a specified height, or the minimum height for the background image */
+  min-height: 500px;
+
+  /* Set background image to fixed (don't scroll along with the page) */
   background-attachment: fixed;
-  {{/if}}
 
+  /* Center the background image */
+  background-position: center;
 
+  /* Set the background image to no repeat */
+  background-repeat: no-repeat;
+
+  /* Scale the background image to be as large as possible */
+  background-size: cover;
 
  ">
 <!-- component -->
