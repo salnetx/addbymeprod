@@ -28,7 +28,7 @@
               <svg class="w-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
           
            </p>
-           <p class="text-sm font-bold flex space-x-1">{{name}}</p>
+           <p class="text-sm pt-2 font-light text-gray-700">{{name}}</p>
           <p class="text-sm pt-1 font-light text-gray-700">{{job}} {{workplace}}</p>
           <p class="text-sm pt-2 font-light text-gray-700">"{{bio}}"</p>
         </div>
@@ -67,30 +67,29 @@
   
      <p class="font-semibold px-4 text-gray-600 flex mt-5">Sponsor Id</p>
      <p class="font-semibold px-4 text-gray-600 flex text-sm">we only support instamojo &nbsp;<a class="text-blue-400" href="#"> learn more</a></p>
+        
         <div class="px-4 space-y-3">
-       <input placeholder="Instamojo Id" class="appearance-none mt-2 block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4" type="text" name="bio" id="bio">
-       </div>
-    
-     <p class="font-semibold px-4 text-gray-600 flex mt-5">Monetization</p>
-     <p class="font-semibold px-4 text-gray-600 flex text-sm">coming soon &nbsp;<a class="text-blue-400" href="#"> learn more</a></p>
-
-     <p class="font-semibold px-4 text-gray-600 flex mt-5">Developers</p>
-    <p class="font-semibold px-4 text-gray-600 flex text-sm">coming soon &nbsp;<a class="text-blue-400" href="#"> learn more</a></p>
-
-     <p class="font-semibold px-4 text-gray-600 flex mt-5">Dark Mode</p>
+        <input placeholder="Instamojo Id" class="appearance-none mt-2 block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4" type="text" name="bio" id="bio">
+        </div>
+        <p class="font-semibold px-4 text-gray-600 flex mt-5">Enable Shop</p>
      <style>
 /* CHECKBOX TOGGLE SWITCH */
 /* @apply rules for documentation, these do not work as inline style */
 .toggle-checkbox:checked {
   @apply: right-0 border-green-400;
   right: 0;
-  border-color: #000;
+  border-color: rgb(143, 188, 247);
 }
 .toggle-checkbox:checked + .toggle-label {
   @apply: bg-green-400;
-  background-color: #000;
+  background-color: rgb(143, 188, 247);
 }
 </style>
+
+
+
+
+
                
 <div class="relative inline-block w-10 mr-2 pt-2 mx-4 align-middle select-none transition duration-200 ease-in">
     <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
@@ -107,6 +106,20 @@
       <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
       </svg></a></p>
 
+     <p class="font-semibold px-4 text-gray-600 flex mt-5"><a class="flex inline-block" href="/help">Any Feedback ?<svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+      </svg></a></p>
+
+      <p class="font-semibold px-4 text-gray-600 flex mt-5"><a class="flex inline-block" href="/help">Report Something<svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+      </svg></a></p>
+
+      <p class="font-semibold px-4 text-gray-600 flex mt-5"><a class="flex inline-block" href="/help">Create Ad<svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+      </svg></a></p>
      
   <!-- Edit Link -->
 <button class="bg-black  hover:bg-blue-dark text-white font-bold py-2 mt-8 mx-24 rounded-full">
@@ -122,12 +135,12 @@
          <a href="/monetize"> 
            <div class="w-2/12 h-full">
             <div class="h-12 w-12  rounded-full flex items-center">
-           <svg class="w-full text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>          
+           <svg class="w-full text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>          
            </div>
           </div>
           </a>
           <div class="w-8/12 h-full flex items-start">
-            <p class="my-auto text-lg font-semibold">Try Premium</p>
+            <p class="my-auto text-lg font-semibold">Not Verified</p>
           </div>
           <div class="w-4/12 h-full flex justify-end items-end">
            <a href="/logout"> <button class="flex bg-red-700 hover:bg-red-600 hover:shadow-lg rounded-md my-auto px-5 py-1 float-right text-white font-medium">Logout</button>

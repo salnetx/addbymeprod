@@ -19,7 +19,10 @@ router.get('/', async(req,res)=>{
                 username : dbUser1[0].username,
                 name : dbUser1[0].name,
                 dob : dbUser1[0].dob,
-                avatar : dbUser1[0].avatar
+                avatar : dbUser1[0].avatar,
+                bio : dbUser1[0].bio,
+                job : dbUser1[0].job,
+                workplace : dbUser1[0].workplace
             })
         }catch(err){
             res.render(`./user/createProfile.hbs`,{
