@@ -45,16 +45,16 @@
             <span class="block w-40 h-40 rounded-full m-auto shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
             </span>
         </div>
-        <button type="button" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-3" x-on:click.prevent="$refs.photo.click()">
+        {{!-- <button type="button" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-3" x-on:click.prevent="$refs.photo.click()">
             Select New Photo
-        </button>
+        </button> --}}
     </div>
     
 </div>
     <div class="pt-12 px-4 w-full flex flex-col">
       <p class="font-semibold text-gray-600">Add Username</p>
        <div class="my-8">
-       <label class="input-field inline-flex items-baseline border rounded-full bg-white p-4"><span class="flex-none text-dusty-blue-darker select-none leading-none">addby.me/</span><div class="flex-1 leading-none"><input id="username" type="text" class="focus:outline-none" name="username" placeholder="{{username}}"></div></label>
+       <label class="input-field inline-flex items-baseline border rounded-full bg-white p-4"><span class="flex-none text-dusty-blue-darker select-none leading-none">addby.me/</span><div class="flex-1 leading-none"><input id="username" type="text" class="focus:outline-none" name="username" value="{{username}}"></div></label>
        </div>
        </div>
 
@@ -62,12 +62,12 @@
 	    <div class="md:flex flex-row md:space-x-4 px-4 w-full text-xs">
 	    <div class="mb-3 space-y-2 w-full text-xs">
 		<label class="font-semibold text-gray-600 py-2">Name</label>
-		<input placeholder="{{name}}" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="name" id="name">
+		<input value="{{name}}" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="name" id="name">
 		<p class="text-red text-xs hidden">Please fill out this field.</p>
 		</div>
 		<div class="mb-3 space-y-2 w-full text-xs">
 		<label class="font-semibold text-gray-600 py-2">Date Of Birth </label>
-		<input placeholder="{{dob}}" min="1900-01-01" max="2005-01-01" class="appearance-none block w-full bg-grey-lighter text-grey-darker border focus:outline-none border-grey-lighter rounded-lg h-10 px-4"  type="date" name="dob" id="dob">
+		<input value="{{dob}}" min="1900-01-01" max="2005-01-01" class="appearance-none block w-full bg-grey-lighter text-grey-darker border focus:outline-none border-grey-lighter rounded-lg h-10 px-4"  type="date" name="dob" id="dob">
 		<p class="text-red text-xs hidden">Please fill out this field.</p>
 		</div>
 		</div>
@@ -75,24 +75,24 @@
         <div class="md:flex flex-row md:space-x-4 px-4 w-full text-xs">
 	    <div class="mb-3 space-y-2 w-full text-xs">
 		<label class="font-semibold text-gray-600 py-2">Profession</label>
-		<input placeholder="{{job}}" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="job" id="job">
+		<input value="{{job}}" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="job" id="job">
 		<p class="text-red text-xs hidden">Please fill out this field.</p>
 		</div>
 		<div class="mb-3 space-y-2 w-full text-xs">
 		<label class="font-semibold text-gray-600 py-2">Workplace </label>
-		<input placeholder="{{workplace}}" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="workplace" id="workplace">
+		<input value="{{workplace}}" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4"  type="text" name="workplace" id="workplace">
 		<p class="text-red text-xs hidden">Please fill out this field.</p>
 		</div>
 		</div>
 
        <div class="px-4 space-y-3">
        <label class="font-semibold text-gray-600 py-2">Avatar Url </label>
-       <input placeholder="{{avatar}}" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4" type="text" name="avatar" id="avatar">
+       <input value="{{avatar}}" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4" type="text" name="avatar" id="avatar">
        </div>
 
        <div class="px-4 space-y-3">
        <label class="font-semibold text-gray-600 py-2">Bio </label>
-       <input placeholder="{{bio}}" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4" type="text" name="bio" id="bio">
+       <input value="{{bio}}" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4" type="text" name="bio" id="bio">
        </div>
     
 

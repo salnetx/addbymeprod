@@ -79,7 +79,10 @@ router.get('/edit/profile', async(req,res)=>{
             username : dbUser1[0].username,
             name : dbUser1[0].name,
             dob : dbUser1[0].dob,
-            avatar : dbUser1[0].avatar
+            avatar : dbUser1[0].avatar,
+            job : dbUser1[0].job,
+            workplace : dbUser1[0].workplace,
+            bio : dbUser1[0].bio
         })
     }catch(err){
          res.redirect('/profile')
@@ -87,11 +90,11 @@ router.get('/edit/profile', async(req,res)=>{
 })
 
 
-router.post('/editprofile/:postid', async(req,res)=>{
+router.post('/editprofile/:id', async(req,res)=>{
 
        try{
 
-         await User.update({_id : req.params.postid},{$set: {
+         await User.update({_id : req.params.id},{$set: {
              username : req.body.username,
              name : req.body.name,
              dob : req.body.dob,
