@@ -109,6 +109,28 @@ router.post('/editprofile/:id', async(req,res)=>{
        }
 })
 
+router.post('/edittheme/:id', async(req,res)=>{
+
+    try{
+
+      await User.update({_id : req.params.id},{$set: {
+          txtclr : req.body.txtclr,
+          btnclr : req.body.btnclr,
+          sprtbtn : req.body.sprtbtn,
+          roundbtn : req.body.roundbtn,
+          crdtbtn : req.body.crdtbtn,
+          cstmbg : req.body.cstmbg,
+          desc : req.body.desc,
+          keywords : req.body.keywords,
+          fav : req.body.fav,
+          title : req.body.title
+      }})
+      res.redirect('/theme')
+    }catch(err){
+        console.log(err)
+    }
+})
+
 router.get('/profile', async(req,res)=>{
     try{
         const _authUser = await req.oidc.user;
@@ -138,7 +160,13 @@ router.get('/theme', async(req,res)=>{
             job : dbUser1[0].job,
             workplace : dbUser1[0].workplace,
             bio : dbUser1[0].bio,
-            avatar : dbUser1[0].avatar
+            avatar : dbUser1[0].avatar,
+            authUser : _authUser,
+            desc : dbUser1[0].desc,
+            cstmbg : dbUser1[0].cstmbg,
+            keywords : dbUser1[0].keywords,
+            fav : dbUser1[0].fav,
+            title : dbUser1[0].title
         })
     }catch(err){
          res.redirect('/')
@@ -224,7 +252,14 @@ router.get('/:username', async(req,res)=>{
             avatar : dbUser[0].avatar,
             bio : dbUser[0].bio,
             job : dbUser[0].job,
-            workplace : dbUser[0].workplace
+            workplace : dbUser[0].workplace,
+            desc : dbUser[0].desc,
+            cstmbg : dbUser[0].cstmbg,
+            keywords : dbUser[0].keywords,
+            btnclr : dbUser[0].btnclr,
+            txtclr :dbUser[0].txtclr,
+            fav : dbUser[0].fav,
+            title : dbUser[0].title
         }) 
      }catch(err){
         res.render(`./publicViews/error`,{

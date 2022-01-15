@@ -1,12 +1,13 @@
 <html lang="en">
 <head>
     {{>cdnLinks}}
-    <title>addbyme</title>
+    <title>cool</title>
+  
 </head>
 <body style="font-family: 'Inter', sans-serif">
     {{>afterProfileCreation/nav}}
 
-<div class=" overflow-x-hidden">
+<div class="overflow-x-hidden">
 <div>
         <div class="flex justify-between container mx-auto">
             <div class="w-full lg:w-8/12">
@@ -61,70 +62,71 @@
     
    <hr class="mt-2">
      <div class="px-4" id="demo">
+       <form method="POST" enctype="application/json" role="form" action="/edittheme/{{authUser.sub}}">
 
      <div class="flex inline font-semibold px-4 text-gray-600 mt-5 space-x-2">
        <label for="fname">Text Color:</label><br>
-       <input style="width: 5%; height:25px" type="color">     
+       <input style="width: 5%; height:25px"  type="color" name="txtclr">     
      </div> 
 
      <div class="flex inline font-semibold px-4 text-gray-600 mt-5 space-x-2">
        <label for="fname">Button Color:</label><br>
-       <input style="width: 5%; height:25px" type="color">     
+       <input style="width: 5%; height:25px"  type="color" name="btnclr">     
      </div> 
 
      <div class="flex inline font-semibold px-4 text-gray-600 mt-5 space-x-2">
-      <label for="fname">Credit Button:</label><br>
-     <input type="checkbox">
+      <label for="fname">Support Button:</label><br>
+     <input type="checkbox"  name="sprtbtn">
      </div>
 
 
      <div class="flex inline font-semibold px-4 text-gray-600 mt-5 space-x-2">
       <label for="fname">Rounded Button:</label><br>
-     <input type="checkbox">
+     <input type="checkbox" name="roundbtn">
      </div>
 
 
-     <p class="font-semibold px-4 text-gray-600 flex mt-5">Theme Font</p>
      
      <div class="flex inline font-semibold px-4 text-gray-600 mt-5 space-x-2">
       <label for="fname">Credit Button:</label><br>
-     <input type="checkbox">
+     <input type="checkbox" >
      </div>
 
      <div class=" font-semibold px-4 text-gray-600 mt-5">
      <label for="fname">Custom background:</label><br> 
-     <input placeholder="Background image url" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" name="bio" id="bio">
+     <input placeholder="Background image url" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" value="{{cstmbg}}" name="cstmbg" id="cstmbg">
      </div>
 
      <div class=" font-semibold px-4 text-gray-600 mt-5">
       <label for="fname">Description:</label><br> 
-     <input placeholder="Description" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" name="bio" id="bio">
+     <input placeholder="Description" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" value="{{desc}}" name="desc" id="desc">
      </div>
 
      
      <div class=" font-semibold px-4 text-gray-600 mt-5">
       <label for="fname">Keywords:</label><br> 
-     <input placeholder="Keywords" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" name="bio" id="bio">
+     <input placeholder="Keywords" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" value="{{keywords}}" name="keywords" id="keywords">
      </div>
 
           
      <div class=" font-semibold px-4 text-gray-600 mt-5">
       <label for="fname">Custom favicon:</label><br> 
-     <input placeholder="favicon url" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" name="bio" id="bio">
+     <input placeholder="favicon url" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" value="{{fav}}" name="fav" id="fav">
      </div>
      
+     <div class=" font-semibold px-4 text-gray-600 mt-5">
+      <label for="fname">Custom title:</label><br> 
+     <input placeholder="custom title" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" value="{{title}}" name="title" id="title">
+     </div>
+
 
      <div class=" font-semibold px-4 text-gray-600 mt-5">
-     <label for="fname">Custom title:</label><br> 
-     <input placeholder="Custom title" class="appearance-none block w-full  text-grey-darker border border-grey-lighter focus:outline-none rounded-lg h-10 px-4 mt-2" type="text" name="bio" id="bio">
+     <button type="submit" class="bg-black text-white font-bold py-2 px-4 rounded-full">
+      Save Settings
+     </button>
      </div>
-
-
-     </div>
-    
-
-
-
+     </form>
+    </div>
     </div>
 <!-- Post -->
 <!-- POSTS -->

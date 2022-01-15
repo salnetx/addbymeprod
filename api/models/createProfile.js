@@ -20,26 +20,8 @@ const socialLink = new mongoose.Schema({
 });
 
 const theme = new mongoose.Schema({
-    bg : {
-        require : false,
-        type : String
-    },
-    txt : {
-        require : false,
-        type : String
-    },
-    btn : {
-        require : false,
-        type : String
-    },
-    spnsr : {
-        require : false,
-        type : Boolean
-    },
-    crdt : {
-        require : false,
-        type : Boolean
-    }
+   
+
 })
 const link = new mongoose.Schema({
 
@@ -87,10 +69,46 @@ const userSchema = new mongoose.Schema({
     sponsor : {
         type : String
     },
-    setting : [setting],
-    socialLink : [socialLink],
-    theme : [theme], 
-    link : [link]
+    txtclr : {
+        require : false,
+        type : String
+    },
+    btnclr : {
+        require : false,
+        type : String
+    },
+    sprtbtn : {
+        require : false,
+        type : Boolean
+    },
+    roundbtn : {
+        require : false,
+        type : Boolean
+    },
+    crdtbtn : {
+        require : false,
+        type : Boolean
+    },
+    cstmbg : {
+        require : false,
+        type : String
+    },
+    desc : {
+        require : false,
+        type : String
+    },
+    keywords : {
+        require : false,
+        type : String
+    },
+    fav : {
+        require : false,
+        type : String
+    },
+    title : {
+        require : false,
+        type : String
+    },
 
 
 })

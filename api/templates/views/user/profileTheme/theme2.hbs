@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
  {{>cdnLinks}}
- <title>{{username}}</title>
+ {{#if title}}
+ <title>{{title}}</title>
+ {{else}}
+<title>{{username}}</title>
+{{/if}}
 </head>
 <body style="font-family: 'Inter', sans-serif;
 font-weight: 700;
   
-font-style: normal; background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cca1e136569841.5720ffd3c7679.gif');
+font-style: normal; background-image: url('{{cstmbg}}');
 
   /* Set a specified height, or the minimum height for the background image */
   min-height: 500px;
@@ -74,12 +78,12 @@ font-style: normal; background-image: url('https://mir-s3-cdn-cf.behance.net/pro
       
 
       <a href="https://twitter.com/{{username}} ">
-      <div class="flex justify-between items-center h-16 p-4 my-6  rounded-full border border-gray-100 bg-white shadow-xl">
+      <div style="background-color: {{btnclr}};" class="flex justify-between items-center h-16 p-4 my-6  rounded-full   shadow-xl">
       <div class="flex items-center ">
         <img class="rounded-full h-12 w-12" src="https://vionet-addby-me-cdn.netlify.app/twitter.png" alt="Logo" />
       <div class="ml-2">
-        <div class="text-sm font-semibold text-black">Twitter</div>
-        <div class="text-sm font-light text-gray-600">@{{username}}</div>
+        <div style="color: {{txtclr}};" class="text-sm font-semibold ">Twitter</div>
+        <div style="color: {{txtclr}};" class="text-sm font-light">@{{username}}</div>
       </div>
       </div>
       <div>
@@ -88,7 +92,7 @@ font-style: normal; background-image: url('https://mir-s3-cdn-cf.behance.net/pro
       </div>
     </a>
       <a href="https://github.com/{{username}}">
-      <div class="flex justify-between items-center bg-white h-16 p-4 my-6  rounded-full border border-gray-100 shadow-xl">
+      <div class="flex justify-between items-center bg-white h-16 p-4 my-6  rounded-full  shadow-xl">
       <div class="flex items-center">
         <img class="rounded-full h-12 w-12" src="https://vionet-addby-me-cdn.netlify.app/github.png" alt="Logo" />
         <div class="ml-2">
