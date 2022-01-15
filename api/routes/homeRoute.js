@@ -5,6 +5,44 @@ const router = express.Router();
 
 
 
+router.get('/', async(req,res)=>{
+
+    const isAuthenticated = req.oidc.isAuthenticated();
+    const authUser = req.oidc.user;
+    if(isAuthenticated && authUser.email_verified){
+        try{
+            const _authUser = req.oidc.user;
+            const dbUser1 = await User.find({_id : _authUser.sub});
+            user = req.oidc.user,
+            _user = JSON.stringify(user, null, 2),
+            res.render(`./user/feed`,{
+                username : dbUser1[0].username,
+                name : dbUser1[0].name,
+                dob : dbUser1[0].dob,
+                avatar : dbUser1[0].avatar
+            })
+        }catch(err){
+            res.render(`./user/createProfile.hbs`,{
+                authUser : req.oidc.user
+            });
+        }
+        
+    }else if(isAuthenticated){
+         res.render(`verifyYourEmail`,{
+            authUser : req.oidc.user
+         })
+    }
+    else{
+        res.render('./publicViews/index.hbs',{
+            title : "please log in",
+        })
+    }
+
+
+})
+
+
+
 router.post('/create', async(req,res)=>{
     
     const authUser = req.oidc.user;
@@ -165,38 +203,6 @@ router.get('/saved', async(req,res)=>{
     }
 })
 
-router.get('/', async(req,res)=>{
-
-
-
-    const isAuthenticated = req.oidc.isAuthenticated();
-    if(isAuthenticated ){
-        try{
-            const _authUser = req.oidc.user;
-            const dbUser1 = await User.find({_id : _authUser.sub});
-            user = req.oidc.user,
-            _user = JSON.stringify(user, null, 2),
-            res.render(`./user/feed`,{
-                username : dbUser1[0].username,
-                name : dbUser1[0].name,
-                dob : dbUser1[0].dob,
-                avatar : dbUser1[0].avatar
-            })
-        }catch(err){
-            res.render(`./user/createProfile.hbs`,{
-                authUser : req.oidc.user
-            });
-        }
-        
-    }
-    else{
-        res.render('./publicViews/index.hbs',{
-            title : "please log in",
-        })
-    }
-
-
-})
 
 
 
