@@ -166,7 +166,9 @@ router.get('/theme', async(req,res)=>{
             cstmbg : dbUser1[0].cstmbg,
             keywords : dbUser1[0].keywords,
             fav : dbUser1[0].fav,
-            title : dbUser1[0].title
+            title : dbUser1[0].title,
+            btnclr : dbUser1[0].btnclr,
+            txtclr : dbUser1[0].txtclr
         })
     }catch(err){
          res.redirect('/')
