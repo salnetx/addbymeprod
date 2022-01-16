@@ -124,6 +124,7 @@ router.post('/edittheme/:id', async(req,res)=>{
           keywords : req.body.keywords,
           fav : req.body.fav,
           title : req.body.title,
+          text : req.body.text
       }})
       res.redirect('/theme')
     }catch(err){
@@ -171,7 +172,8 @@ router.get('/theme', async(req,res)=>{
             txtclr : dbUser1[0].txtclr,
             sprtbtn : dbUser1[0].sprtbtn,
             roundbtn : dbUser1[0].roundbtn,
-            crdtbtn : dbUser1[0].crdtbtn
+            crdtbtn : dbUser1[0].crdtbtn,
+            text : dbUser1[0].text
 
         })
     }catch(err){
@@ -268,7 +270,8 @@ router.get('/:username', async(req,res)=>{
             title : dbUser[0].title,
             sprtbtn : dbUser[0].sprtbtn,
             crdtbtn : dbUser[0].crdtbtn,
-            roundbtn : dbUser[0].roundbtn
+            roundbtn : dbUser[0].roundbtn,
+            text : dbUser[0].text
         }) 
      }catch(err){
         res.render(`./publicViews/error`,{

@@ -32,13 +32,14 @@ font-style: normal; background-image: url('{{cstmbg}}');
 <!-- component -->
     
      {{#if isAuthenticated}}
-      <div class="mt-2 ml-2 flex">
-      <a href="javascript:history.back()">  <svg class="bg-white rounded" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/></svg>
+      <div style="color: {{text}}" class="mt-2 ml-2 flex">
+      <a href="javascript:history.back()">  
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
       </a>
-      <a href="#" class="text-red-100  px-2 text-lg font-semibold inline-block">chat</a>
-		  <a href="#" class="text-red-100  px-2 text-lg font-semibold inline-block">add +</a>
+      <a href="#" class="  px-2 text-lg font-semibold inline-block">chat</a>
+		  <a href="#" class="  px-2 text-lg font-semibold inline-block">add +</a>
       <a href="https://addby.me" class="rounded-full  pl-2  text-xl font-semibold inline-block">
-     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+     <svg xmlns="http://www.w3.org/2000/svg" class="w-5" viewBox="0 0 20 20" fill="currentColor">
      <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
      </svg>      
      </a>
@@ -55,7 +56,7 @@ font-style: normal; background-image: url('{{cstmbg}}');
         <img class="object-cover w-full h-full" src="{{avatar}}">
       </div>
       <div class="mt-4">
-        <h1 class="text-lg text-center text-white font-semibold">
+        <h1 style="color: {{text}};" class="text-lg text-center font-semibold">
           <p class="text-3xl font-bold">{{username}} </p>
           <p class="text-sm font-bold">{{job}} {{workplace}}</p>
           <p class="text-sm font-thin">{{bio}}</p>

@@ -109,6 +109,10 @@ const userSchema = new mongoose.Schema({
         require : false,
         type : String
     },
+    text : {
+        require : false,
+        type : String
+    },
 
 
 })

@@ -18,9 +18,6 @@ router.get('/help',(req,res)=>{
     res.send(`help`)
 })
 
-router.get('/developers',(req,res)=>{
-    res.send(`developers`)
-})
 
 router.get('/ads',(req,res)=>{
     res.send(`ads`)
