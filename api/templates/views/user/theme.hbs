@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     {{>cdnLinks}}
-    <title>cool</title>
+    <title>addbyme</title>
   
 </head>
 <body style="font-family: 'Inter', sans-serif">
@@ -74,23 +74,18 @@
        <input style="width: 5%; height:25px" value="{{btnclr}}"  type="color" name="btnclr">     
      </div> 
 
+
+ 
+
      <div class="flex inline font-semibold px-4 text-gray-600 mt-5 space-x-2">
       <label for="fname">Support Button:</label><br>
-     <input type="checkbox"  name="sprtbtn">
+     <input type="checkbox"  name="sprtbtn" {{#if sprtbtn}} checked {{/if}}
+     {{#if sprtbtn}} value="0" {{else}} value="1"{{/if}}
+     >
      </div>
-
-
-     <div class="flex inline font-semibold px-4 text-gray-600 mt-5 space-x-2">
-      <label for="fname">Rounded Button:</label><br>
-     <input type="checkbox" name="roundbtn">
-     </div>
-
 
      
-     <div class="flex inline font-semibold px-4 text-gray-600 mt-5 space-x-2">
-      <label for="fname">Credit Button:</label><br>
-     <input type="checkbox" >
-     </div>
+
 
      <div class=" font-semibold px-4 text-gray-600 mt-5">
      <label for="fname">Custom background:</label><br> 

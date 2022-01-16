@@ -113,7 +113,7 @@ router.post('/edittheme/:id', async(req,res)=>{
 
     try{
 
-      await User.update({_id : req.params.id},{$set: {
+      await User.updateMany({_id : req.params.id},{$set: {
           txtclr : req.body.txtclr,
           btnclr : req.body.btnclr,
           sprtbtn : req.body.sprtbtn,
@@ -123,7 +123,7 @@ router.post('/edittheme/:id', async(req,res)=>{
           desc : req.body.desc,
           keywords : req.body.keywords,
           fav : req.body.fav,
-          title : req.body.title
+          title : req.body.title,
       }})
       res.redirect('/theme')
     }catch(err){
@@ -168,7 +168,11 @@ router.get('/theme', async(req,res)=>{
             fav : dbUser1[0].fav,
             title : dbUser1[0].title,
             btnclr : dbUser1[0].btnclr,
-            txtclr : dbUser1[0].txtclr
+            txtclr : dbUser1[0].txtclr,
+            sprtbtn : dbUser1[0].sprtbtn,
+            roundbtn : dbUser1[0].roundbtn,
+            crdtbtn : dbUser1[0].crdtbtn
+
         })
     }catch(err){
          res.redirect('/')
@@ -261,7 +265,10 @@ router.get('/:username', async(req,res)=>{
             btnclr : dbUser[0].btnclr,
             txtclr :dbUser[0].txtclr,
             fav : dbUser[0].fav,
-            title : dbUser[0].title
+            title : dbUser[0].title,
+            sprtbtn : dbUser[0].sprtbtn,
+            crdtbtn : dbUser[0].crdtbtn,
+            roundbtn : dbUser[0].roundbtn
         }) 
      }catch(err){
         res.render(`./publicViews/error`,{
