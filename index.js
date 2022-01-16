@@ -7,8 +7,10 @@ const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const createProfile = require('./api/models/createProfile');
 var axios = require("axios").default;
+const dotenv = require('dotenv')
+dotenv.config()
 const PORT = process.env.PORT || 3000;
-const url = 'mongodb+srv://abmmngdb:Khankimagi420@cluster0.wyltp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const url = process.env.MONGODB_URI
 
 
 // Database
