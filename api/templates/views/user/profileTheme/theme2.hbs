@@ -8,12 +8,20 @@
 <title>{{username}}</title>
 {{/if}}
 </head>
-
-<body class="bg-fixed" style="font-family: 'Inter', sans-serif;
+<body class="h-screen object-cover w-full h-full" style="font-family: 'Inter', sans-serif;
 font-weight: 700;
   
 font-style: normal; background-image: url('{{cstmbg}}');
 
+  min-height: 500px;
+
+  background-attachment: fixed;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
 
  ">
 <!-- component -->
@@ -245,6 +253,8 @@ font-style: normal; background-image: url('{{cstmbg}}');
 
 
     </div>
+
+
 
 <!-- component -->
     </body>
